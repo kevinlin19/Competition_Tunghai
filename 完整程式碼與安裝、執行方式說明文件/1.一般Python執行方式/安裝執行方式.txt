@@ -1,0 +1,21 @@
+環境要求
+————————————————————
+Python3
+- scikit-learn
+- pandas
+- numpy
+- tsfresh
+- glob2
+
+說明
+————————————————————
+1. main.py 主要執行檔
+	在本資料夾下執行python main.py 會print出檔案對應的預測值，並同時建立final_answer.csv檔案於answer裡。
+2. feature.py 提取時間序列特徵
+	目前提取特徵已存於data中並取名為xgb_feature_new.csv
+3. data_preprocessing.py 整理feature data
+
+大體思路
+————————————————————
+1. 資料預處理，透過tsfresh提取時間序列特徵，並透過假說檢定找出相關feature。
+2. 主要模型： xgboost，透過13個feature預測品質。
